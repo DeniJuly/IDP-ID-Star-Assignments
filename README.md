@@ -1,42 +1,34 @@
-# IDP ID Star Program - Task Repository
+# Laravel BE Level 2 Assignment
 
-Welcome to the repository for storing all answers and solutions for the **IDP ID Star** program assignments. Each assignment is stored in a different branch, and this repository serves as the central place for managing and submitting tasks.
+This branch store solution for Course Building RESTful APIs with Laravel 9.
 
 ## Table of Contents
 
-- [Repository Structure](#repository-structure)
-- [Branches](#branches)
-- [Contact](#contact)
+- [Question](#question)
+- [File Structure](#file-structure)
 
-## Repository Structure
+## Question
 
-Each assignment is stored in its own branch to keep the tasks organized and separated. The repository is structured as follows:
+1. Tulis sebuah fungsi PHP yang menerima sebuah array bilangan bulat dan mengembalikan nilai maksimum dari array tersebut.
 
-📂 IDP-ID-Star-Assignments
+2. Apa perbedaan antara $foo = 'bar'; dan $foo = &$bar; dalam konteks variabel di PHP?
 
-- **Main Branch**
-- **solution/assignment-laravel-be-level-1**
+3. Tulis sebuah fungsi PHP yang menerima dua array dan menggabungkan keduanya menjadi satu array dengan menghapus duplikat.
 
-## Branches
+4. Buatlah Tulis sebuah fungsi PHP yang menerima sebuah string dan mengembalikan jumlah kata dalam string tersebut.
 
-Each branch corresponds to an individual assignment. The branch names are structured in the following format:
+5. Buatlah sebuah regular expression dalam PHP untuk memeriksa apakah sebuah string merupakan alamat email yang valid.
 
-solution/assignment-[assignment-name]
-For example:
+6. Buatlah aplikasi kalkulator sederhana dengan PHP.
 
-- `solution/assignment-1`
-- `solution/assignment-2`
-- `solution/assignment-database`
+## File Structure
 
-### Available Branches:
-
-- **Main**: Contains general information and documentation.
-- **solution/assignment-laravel-be-level-1**: Solution for assignment [Laravel BE Level 1](https://github.com/DeniJuly/IDP-ID-Star-Assignments/tree/solution/assignment-laravel-be-level-1)
-
-## Contact
-
-If you have any questions or need help regarding the assignments or repository, feel free to reach out:
-
-- **Name**: Deni Juli Setiawan
-- **Email**: denijuli.setiawan@gmail.com
-- **LinkedIn**: [Deni Juli Setiawan](https://www.linkedin.com/in/deni-juli-setiawan-6b3088170/)
+```
+├── README.md
+├── solution1.php
+├── solution2.php
+├── solution3.php
+├── solution4.php
+├── solution5.php
+├── solution6.php
+```
