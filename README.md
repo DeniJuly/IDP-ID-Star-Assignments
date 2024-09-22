@@ -1,42 +1,89 @@
-# IDP ID Star Program - Task Repository
+# Laravel BE Level 1 Assignment
 
-Welcome to the repository for storing all answers and solutions for the **IDP ID Star** program assignments. Each assignment is stored in a different branch, and this repository serves as the central place for managing and submitting tasks.
+This branch store solution for Course Building RESTful APIs with Laravel 9.
 
 ## Table of Contents
 
-- [Repository Structure](#repository-structure)
-- [Branches](#branches)
-- [Contact](#contact)
+- [Question](#question)
+- [File Structure](#file-structure)
 
-## Repository Structure
+## Question
 
-Each assignment is stored in its own branch to keep the tasks organized and separated. The repository is structured as follows:
+1. Buatlah sebuah algoritma dan kode program PHP untuk menentukan apakah sebuah bilangan merupakan bilangan prima atau bukan. Misal :
 
-📂 IDP-ID-Star-Assignments
+   ```bash
+   $bilangan = 17;
+   ```
 
-- **Main Branch**
-- **solution/assignment-laravel-be-level-1**
+2. Buatlah sebuah algoritma dan kode program PHP untuk mencari nilai maksimum dari tiga bilangan yang diberikan.
 
-## Branches
+   ```bash
+   $bilangan1 = 10;
+   $bilangan2 = 5;
+   $bilangan3 = 8;
+   ```
 
-Each branch corresponds to an individual assignment. The branch names are structured in the following format:
+3. Buatlah sebuah algoritma dan kode program PHP untuk menghitung faktorial dari sebuah bilangan. Misal:
 
-solution/assignment-[assignment-name]
-For example:
+   ```bash
+   $bilangan = 5
+   ```
 
-- `solution/assignment-1`
-- `solution/assignment-2`
-- `solution/assignment-database`
+4. Buatlah sebuah algoritma dan kode program PHP untuk menentukan apakah sebuah kata atau frase merupakan palindrom atau bukan. Misal:
 
-### Available Branches:
+   ```bash
+   $kata = "malam"; // Masukkan kata atau frase yang akan diperiksa
+   ```
 
-- **Main**: Contains general information and documentation.
-- **solution/assignment-laravel-be-level-1**: Solution for assignment Laravel BE Level 1 [Laravel BE Level 1](https://github.com/DeniJuly/IDP-ID-Star-Assignments/tree/solution/assignment-laravel-be-level-1)
+5. Buatlah sebuah algoritma dan kode program PHP untuk mencetak pola bintang segitiga siku-siku.
 
-## Contact
+   ```bash
+   $jumlahBaris = 5; // Masukkan jumlah baris yang diinginkan.
+   ```
 
-If you have any questions or need help regarding the assignments or repository, feel free to reach out:
+6. Buatlah sebuah algoritma dan kode program PHP untuk menghitung jumlah bilangan genap dalam rentang angka tertentu. Misal:
 
-- **Name**: Deni Juli Setiawan
-- **Email**: denijuli.setiawan@gmail.com
-- **LinkedIn**: [Deni Juli Setiawan](https://www.linkedin.com/in/deni-juli-setiawan-6b3088170/)
+   ```bash
+   $batasBawah = 1;
+   $batasAtas = 10;
+   ```
+
+7. Buatlah sebuah algoritma dan kode program PHP untuk menentukan bilangan terbesar dan terkecil dari sejumlah bilangan yang diberikan. Misal:
+
+   ```bash
+   $bilangan = [10, 5, 8, 12, 3];
+   ```
+
+8. Buatlah sebuah algoritma dan kode program PHP untuk menggabungkan dua array menjadi satu array. Misal:
+
+   ```bash
+   $array1 = [1, 2, 3];
+   $array2 = [4, 5, 6];
+   ```
+
+9. Buatlah sebuah algoritma dan kode program PHP untuk mencetak pola bintang segitiga terbalik.
+
+   ```bash
+   $jumlahBaris = 5; // Masukkan jumlah baris yang diinginkan
+   ```
+
+10. rata-rata dari sejumlah bilangan yang diberikan.
+    ```bash
+    $bilangan = [10, 5, 8, 12, 3];
+    ```
+
+## File Structure
+
+```
+├── README.md
+├── solution1.php
+├── solution2.php
+├── solution3.php
+├── solution4.php
+├── solution5.php
+├── solution6.php
+├── solution7.php
+├── solution8.php
+├── solution9.php
+├── solution10.php
+```
