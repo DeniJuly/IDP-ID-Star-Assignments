@@ -31,7 +31,7 @@ For example:
 ### Available Branches:
 
 - **Main**: Contains general information and documentation.
-- **solution/assignment-laravel-be-level-1**: Solution for assignment Laravel BE Level 1 [Laravel BE Level 1](https://github.com/DeniJuly/IDP-ID-Star-Assignments/tree/solution/assignment-laravel-be-level-1)
+- **solution/assignment-laravel-be-level-1**: Solution for assignment [Laravel BE Level 1](https://github.com/DeniJuly/IDP-ID-Star-Assignments/tree/solution/assignment-laravel-be-level-1)
 
 ## Contact
 
