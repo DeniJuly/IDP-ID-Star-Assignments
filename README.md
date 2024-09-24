@@ -1,4 +1,4 @@
-# Laravel BE Level 2 Assignment
+# React JS Level 1 Assignment
 
 This branch store solution for Course A Comprehensive Guide to Mastering React.js
 
