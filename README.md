@@ -1,44 +1,38 @@
-# IDP ID Star Program - Task Repository
+# Laravel BE Level 2 Assignment
 
-Welcome to the repository for storing all answers and solutions for the **IDP ID Star** program assignments. Each assignment is stored in a different branch, and this repository serves as the central place for managing and submitting tasks.
+This branch store solution for Course A Comprehensive Guide to Mastering React.js
 
 ## Table of Contents
 
-- [Repository Structure](#repository-structure)
-- [Branches](#branches)
-- [Contact](#contact)
+- [Question](#question)
+- [File Structure](#file-structure)
 
-## Repository Structure
+## Question
 
-Each assignment is stored in its own branch to keep the tasks organized and separated. The repository is structured as follows:
+### Soal Essay
 
-📂 IDP-ID-Star-Assignments
+[Answer Assignment React JS - Level 1](https://docs.google.com/document/d/1rvPecNK-5qxr3x3824Z2-UllL5YQQlg_2-nJxgiLzmY/edit?usp=sharing)
 
-- **Main Branch**
-- **solution/assignment-laravel-be-level-1**
-- **solution/assignment-laravel-be-level-2**
+### Soal Studi Kasus
 
-## Branches
+1. Buatlah sebuah form input yang memungkinkan karyawan untuk memasukkan tugas baru.
 
-Each branch corresponds to an individual assignment. The branch names are structured in the following format:
+2. Tampilkan daftar tugas yang sudah ditambahkan dengan menggunakan elemen HTML yang sesuai.
 
-solution/assignment-[assignment-name]
-For example:
+3. Berikan opsi untuk menandai tugas sebagai selesai atau belum selesai.
 
-- `solution/assignment-1`
-- `solution/assignment-2`
-- `solution/assignment-database`
+4. Tambahkan fitur penghapusan tugas dari daftar.
 
-### Available Branches:
+5. Tampilkan jumlah total tugas yang belum selesai.
 
-- **Main**: Contains general information and documentation.
-- **solution/assignment-laravel-be-level-1**: Solution for assignment [Laravel BE Level 1](https://github.com/DeniJuly/IDP-ID-Star-Assignments/tree/solution/assignment-laravel-be-level-1)
-- **solution/assignment-laravel-be-level-2**: Solution for assignment [Laravel BE Level 2](https://github.com/DeniJuly/IDP-ID-Star-Assignments/tree/solution/assignment-laravel-be-level-2)
+6. Tampilkan pesan atau notifikasi jika karyawan telah menyelesaikan semua tugas.
 
-## Contact
+7. Buatlah tombol untuk menghapus semua tugas sekaligus.
 
-If you have any questions or need help regarding the assignments or repository, feel free to reach out:
+## File Structure
 
-- **Name**: Deni Juli Setiawan
-- **Email**: denijuli.setiawan@gmail.com
-- **LinkedIn**: [Deni Juli Setiawan](https://www.linkedin.com/in/deni-juli-setiawan-6b3088170/)
+```
+├── README.md
+├── index.html
+├── favicon.ico
+```
