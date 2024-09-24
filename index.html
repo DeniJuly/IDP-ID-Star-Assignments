@@ -5,15 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To Do List</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="bg-gray-50 h-screen flex justify-center">
-    <main class="max-w-[550px] w-full md:min-w-[550px] flex flex-col gap-2">
-      <div class="px-3 w-full">
+  <body class="h-screen d-flex justify-content-center">
+    <main class="w-100 d-flex flex-column gap-2 container-fluid">
+      <div class="w-100">
         <div
-          class="w-full bg-white p-4 rounded-md h-fit mt-8 border border-gray-100"
+          class="w-100 bg-white py-4 px-3 rounded h-fit mt-3 border border-gray-100"
         >
-          <div class="flex items-center gap-2">
+          <div class="d-flex items-center gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -24,7 +30,6 @@
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="icon icon-tabler icons-tabler-outline icon-tabler-list-check"
             >
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <path d="M3.5 5.5l1.5 1.5l2.5 -2.5" />
@@ -34,20 +39,17 @@
               <path d="M11 12l9 0" />
               <path d="M11 18l9 0" />
             </svg>
-            <h1 class="text-xl font-bold mt-1">To Do List!</h1>
+            <h1 class="fs-5 fw-bold m-0">To Do List!</h1>
           </div>
-          <form class="flex mt-4 gap-2" onsubmit="handleSubmit(event)">
+          <form class="d-flex mt-4 gap-2" onsubmit="handleSubmit(event)">
             <input
-              class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+              class="form-control"
               placeholder="Type your task here..."
               autofocus
               id="input-task"
               autocomplete="off"
             />
-            <button
-              class="rounded-md bg-slate-800 w-10 h-10 shrink-0 grid place-items-center aspect-square border border-transparent text-center text-sm text-white transition-all hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-              type="submit"
-            >
+            <button class="btn btn-dark" type="submit">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -58,7 +60,6 @@
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-plus"
               >
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M12 5l0 14" />
@@ -68,22 +69,19 @@
           </form>
         </div>
       </div>
-      <div class="grid grid-cols-9 gap-2 px-3">
-        <div
-          class="col-span-3 rounded px-3 py-2 border border-gray-100 bg-white flex-1"
-        >
-          <p class="text-xl font-bold" id="total-task-done">0</p>
-          <p class="text-[10px] sm:text-sm text-slate-400">Total Task</p>
+      <div class="info">
+        <div class="rounded px-3 py-2 border border-gray-100 bg-white">
+          <p class="fs-4 m-0 fw-bold" id="total-task-done">0</p>
+          <p class="m-0 text-muted" id="info-label">Total Task</p>
         </div>
-        <div
-          class="col-span-3 rounded px-3 py-2 border border-gray-100 bg-white flex-1"
-        >
-          <p class="text-xl font-bold" id="total-task-unfinish">0</p>
-          <p class="text-[10px] sm:text-sm text-slate-400">Unfinish Task</p>
+        <div class="rounded px-3 py-2 border border-gray-100 bg-white">
+          <p class="fs-4 m-0 fw-bold" id="total-task-unfinish">0</p>
+          <p class="m-0 text-muted" id="info-label">Unfinish Task</p>
         </div>
-        <div class="flex col-span-3">
+        <div class="d-flex">
           <button
-            class="rounded-l flex-1 py-2 border border-e-0 border-gray-100 ratio-square bg-white px-3 grid place-items-center color: text-gray-600 hover:bg-green-200 transition-all duration-300"
+            class="rounded-start py-2 border border-end-0 border-gray-100 d-flex flex-column justify-content-center align-items-center px-3"
+            id="btn-done-all"
             title="Mark all task done"
             onclick="handleMarkAllDone()"
           >
@@ -97,7 +95,6 @@
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="icon icon-tabler icons-tabler-outline icon-tabler-square-rounded-check"
             >
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <path d="M9 12l2 2l4 -4" />
@@ -105,10 +102,11 @@
                 d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"
               />
             </svg>
-            <span class="text-[10px] sm:text-xs">All Done</span>
+            <span class="btn-label">All Done</span>
           </button>
           <button
-            class="rounded-r flex-1 py-2 border border-s-0 border-gray-100 ratio-square bg-white px-3 grid place-items-center color: text-gray-600 hover:bg-red-200 transition-all duration-300"
+            class="rounded-end py-2 border border-start-0 border-gray-100 px-3 d-flex flex-column justify-content-center align-items-center px-3"
+            id="btn-delete-all"
             title="Delete all task"
             onclick="hanldeDeleteAllTask()"
           >
@@ -122,7 +120,6 @@
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="icon icon-tabler icons-tabler-outline icon-tabler-trash"
             >
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <path d="M4 7l16 0" />
@@ -131,15 +128,20 @@
               <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
               <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
             </svg>
-            <span class="text-[10px] sm:text-xs">Delete All</span>
+            <span class="btn-label">Delete All</span>
           </button>
         </div>
       </div>
-      <div id="task" class="flex-1 overflow-auto flex-1 px-3">
+      <div id="task" class="flex-1 overflow-auto">
         <p class="text-gray-500 text-center mt-10 text-sm">Task Empty</p>
       </div>
     </main>
   </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
   <script>
     const task = document.getElementById("task");
     const inputTask = document.getElementById("input-task");
@@ -154,43 +156,23 @@
           <div
             id="task-${item.id}"
             data-id="${item.id}"
-            class="w-full bg-white p-4 rounded-md h-fit flex gap-2 items-start mb-2 border border-gray-100 hover:border-slate-300 transition-all duration-300"
+            class="w-100 bg-white py-2 px-3 rounded h-fit d-flex gap-2 items-start mb-2 border border-gray-100 hover:border-slate-300 transition-all duration-300"
           >
-            <label class="flex items-center cursor-pointer relative mt-1">
-              <input
-                type="checkbox"
-                ${item.isDone ? "checked" : ""}
-                class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
-                onchange="handleTask('${item.id}')"
-                id="checkbox-${item.id}"
-              />
-              <span
-                class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-3.5 w-3.5"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  stroke="currentColor"
-                  stroke-width="1"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-              </span>
-            </label>
-            <div class="flex-1 flex items-start">
-              <p class="m-0 cursor-pointer flex-1 select-none ${
-                item.isDone ? "line-through" : ""
+            <input
+              type="checkbox"
+              ${item.isDone ? "checked" : ""}
+              class="form-check-input"
+              onchange="handleTask('${item.id}')"
+              id="checkbox-${item.id}"
+            />
+            <div class="flex-1 d-flex align-items-start">
+              <p class="flex-1 m-0 cursor-pointer select-none ${
+                item.isDone ? "text-decoration-line-through" : ""
               }" onclick="handleTask('${item.id}')" id="value-${item.id}">${
           item.task
         }</p>
               <button
-                class="bg-gray-300 mt-1 p-[4px] rounded text-white hover:bg-red-500 transition-all"
+                class="btn btn-sm btn-danger"
                 type="button"
                 onclick="handleDeleteTask('${item.id}')"
               >
@@ -223,7 +205,7 @@
       const checkboxTask = document.getElementById(`checkbox-${key}`);
       const valueTask = document.getElementById(`value-${key}`);
       checkboxTask.checked = !checkboxTask.checked;
-      valueTask.classList.toggle("line-through");
+      valueTask.classList.toggle("text-decoration-line-through");
       // set isDone of taskData by key to true or false based on checkboxTask.checked value and update taskData
       taskData = taskData.map((item) => {
         if (item.id === key) {
