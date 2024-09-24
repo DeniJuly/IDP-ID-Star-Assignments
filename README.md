@@ -1,4 +1,4 @@
-# Laravel BE Level 2 Assignment
+# React JS Level 2 Assignment
 
 This branch store solution for Course A Comprehensive Guide to Mastering React.js
 
@@ -8,10 +8,6 @@ This branch store solution for Course A Comprehensive Guide to Mastering React.j
 - [File Structure](#file-structure)
 
 ## Question
-
-### Soal Essay
-
-[Answer Assignment React JS - Level 1](https://docs.google.com/document/d/1rvPecNK-5qxr3x3824Z2-UllL5YQQlg_2-nJxgiLzmY/edit?usp=sharing)
 
 ### Soal Studi Kasus
 
@@ -28,6 +24,8 @@ This branch store solution for Course A Comprehensive Guide to Mastering React.j
 6. Tampilkan pesan atau notifikasi jika karyawan telah menyelesaikan semua tugas.
 
 7. Buatlah tombol untuk menghapus semua tugas sekaligus.
+
+8. Tambahkan Design dengan Boostrap 5. Design Bebas.
 
 ## File Structure
 
