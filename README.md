@@ -17,6 +17,7 @@ Each assignment is stored in its own branch to keep the tasks organized and sepa
 - **Main Branch**
 - **solution/assignment-laravel-be-level-1**
 - **solution/assignment-laravel-be-level-2**
+- **solution/assignment-reactjs-level-1**
 
 ## Branches
 
@@ -34,6 +35,7 @@ For example:
 - **Main**: Contains general information and documentation.
 - **solution/assignment-laravel-be-level-1**: Solution for assignment [Laravel BE Level 1](https://github.com/DeniJuly/IDP-ID-Star-Assignments/tree/solution/assignment-laravel-be-level-1)
 - **solution/assignment-laravel-be-level-2**: Solution for assignment [Laravel BE Level 2](https://github.com/DeniJuly/IDP-ID-Star-Assignments/tree/solution/assignment-laravel-be-level-2)
+- **solution/assignment-reactjs-level-1**: Solution for assignment [React JS Level 2](https://github.com/DeniJuly/IDP-ID-Star-Assignments/tree/solution/assignment-reactjs-level-1)
 
 ## Contact
 
