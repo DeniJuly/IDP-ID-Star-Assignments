@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50 h-screen flex justify-center">
+    <main class="max-w-[550px] w-full md:min-w-[550px] flex flex-col gap-2">
+      <div class="px-3 w-full">
+        <div
+          class="w-full bg-white p-4 rounded-md h-fit mt-8 border border-gray-100"
+        >
+          <div class="flex items-center gap-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-list-check"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M3.5 5.5l1.5 1.5l2.5 -2.5" />
+              <path d="M3.5 11.5l1.5 1.5l2.5 -2.5" />
+              <path d="M3.5 17.5l1.5 1.5l2.5 -2.5" />
+              <path d="M11 6l9 0" />
+              <path d="M11 12l9 0" />
+              <path d="M11 18l9 0" />
+            </svg>
+            <h1 class="text-xl font-bold mt-1">To Do List!</h1>
+          </div>
+          <form class="flex mt-4 gap-2" onsubmit="handleSubmit(event)">
+            <input
+              class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+              placeholder="Type your task here..."
+              autofocus
+              id="input-task"
+              autocomplete="off"
+            />
+            <button
+              class="rounded-md bg-slate-800 w-10 h-10 shrink-0 grid place-items-center aspect-square border border-transparent text-center text-sm text-white transition-all hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+              type="submit"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-plus"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 5l0 14" />
+                <path d="M5 12l14 0" />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="grid grid-cols-9 gap-2 px-3">
+        <div
+          class="col-span-3 rounded px-3 py-2 border border-gray-100 bg-white flex-1"
+        >
+          <p class="text-xl font-bold" id="total-task-done">0</p>
+          <p class="text-[10px] sm:text-sm text-slate-400">Total Task</p>
+        </div>
+        <div
+          class="col-span-3 rounded px-3 py-2 border border-gray-100 bg-white flex-1"
+        >
+          <p class="text-xl font-bold" id="total-task-unfinish">0</p>
+          <p class="text-[10px] sm:text-sm text-slate-400">Unfinish Task</p>
+        </div>
+        <div class="flex col-span-3">
+          <button
+            class="rounded-l flex-1 py-2 border border-e-0 border-gray-100 ratio-square bg-white px-3 grid place-items-center color: text-gray-600 hover:bg-green-200 transition-all duration-300"
+            title="Mark all task done"
+            onclick="handleMarkAllDone()"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-square-rounded-check"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M9 12l2 2l4 -4" />
+              <path
+                d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"
+              />
+            </svg>
+            <span class="text-[10px] sm:text-xs">All Done</span>
+          </button>
+          <button
+            class="rounded-r flex-1 py-2 border border-s-0 border-gray-100 ratio-square bg-white px-3 grid place-items-center color: text-gray-600 hover:bg-red-200 transition-all duration-300"
+            title="Delete all task"
+            onclick="hanldeDeleteAllTask()"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-trash"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M4 7l16 0" />
+              <path d="M10 11l0 6" />
+              <path d="M14 11l0 6" />
+              <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+              <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+            </svg>
+            <span class="text-[10px] sm:text-xs">Delete All</span>
+          </button>
+        </div>
+      </div>
+      <div id="task" class="flex-1 overflow-auto flex-1 px-3">
+        <p class="text-gray-500 text-center mt-10 text-sm">Task Empty</p>
+      </div>
+    </main>
+  </body>
+  <script>
+    const task = document.getElementById("task");
+    const inputTask = document.getElementById("input-task");
+    const totalTaskDone = document.getElementById("total-task-done");
+    const totalTaskUnfinish = document.getElementById("total-task-unfinish");
+    let taskData = [];
+    function render() {
+      task.innerHTML = "";
+      taskData.forEach((item) => {
+        const newTask = document.createElement("div");
+        newTask.innerHTML = `
+          <div
+            id="task-${item.id}"
+            data-id="${item.id}"
+            class="w-full bg-white p-4 rounded-md h-fit flex gap-2 items-start mb-2 border border-gray-100 hover:border-slate-300 transition-all duration-300"
+          >
+            <label class="flex items-center cursor-pointer relative mt-1">
+              <input
+                type="checkbox"
+                ${item.isDone ? "checked" : ""}
+                class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+                onchange="handleTask('${item.id}')"
+                id="checkbox-${item.id}"
+              />
+              <span
+                class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-3.5 w-3.5"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  stroke="currentColor"
+                  stroke-width="1"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </span>
+            </label>
+            <div class="flex-1 flex items-start">
+              <p class="m-0 cursor-pointer flex-1 select-none ${
+                item.isDone ? "line-through" : ""
+              }" onclick="handleTask('${item.id}')" id="value-${item.id}">${
+          item.task
+        }</p>
+              <button
+                class="bg-gray-300 mt-1 p-[4px] rounded text-white hover:bg-red-500 transition-all"
+                type="button"
+                onclick="handleDeleteTask('${item.id}')"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="size-5"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M4 7l16 0" />
+                  <path d="M10 11l0 6" />
+                  <path d="M14 11l0 6" />
+                  <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                  <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                </svg>
+              </button>
+            </div>
+          </div>`;
+        task.appendChild(newTask);
+      });
+    }
+    function handleTask(key) {
+      const checkboxTask = document.getElementById(`checkbox-${key}`);
+      const valueTask = document.getElementById(`value-${key}`);
+      checkboxTask.checked = !checkboxTask.checked;
+      valueTask.classList.toggle("line-through");
+      // set isDone of taskData by key to true or false based on checkboxTask.checked value and update taskData
+      taskData = taskData.map((item) => {
+        if (item.id === key) {
+          item.isDone = checkboxTask.checked;
+        }
+        return item;
+      });
+      handleTaskInfo();
+    }
+    function handleDeleteTask(key) {
+      const task = document.getElementById(`task-${key}`);
+      task.remove();
+      taskData = taskData.filter((item) => item.id !== key);
+      handleTaskInfo();
+    }
+    function handleTaskInfo() {
+      const totalUnfinish = taskData.filter((item) => !item.isDone).length;
+      totalTaskDone.innerHTML = taskData.length;
+      totalTaskUnfinish.innerHTML = totalUnfinish;
+      if (totalUnfinish === 0 && taskData.length > 0) {
+        alert("Congratulations! You have completed all tasks!");
+      }
+    }
+    function handleSubmit(e) {
+      e.preventDefault();
+      const taskValue = inputTask.value;
+      // validate taskValue
+      if (taskValue.trim() === "") {
+        alert("Task cannot be empty");
+        return;
+      }
+      // add task to taskData
+      taskData.push({
+        id: crypto.randomUUID(),
+        task: taskValue,
+        isDone: false,
+      });
+      inputTask.value = "";
+      // render
+      render();
+      handleTaskInfo();
+    }
+    function handleMarkAllDone() {
+      if (taskData.length === 0) {
+        alert("No task to mark all done");
+        return;
+      }
+      if (taskData.filter((item) => !item.isDone).length === 0) {
+        alert("All task is already done");
+        return;
+      }
+      const isConfirm = confirm("Are you sure you want to mark all task done?");
+      if (isConfirm) {
+        taskData = taskData.map((item) => {
+          item.isDone = true;
+          return item;
+        });
+        render();
+        handleTaskInfo();
+      }
+    }
+    function hanldeDeleteAllTask() {
+      if (taskData.length === 0) {
+        alert("No task to delete");
+        return;
+      }
+      const isConfirm = confirm("Are you sure you want to delete all task?");
+      if (isConfirm) {
+        taskData = [];
+        render();
+        handleTaskInfo();
+      }
+    }
+  </script>
+</html>
